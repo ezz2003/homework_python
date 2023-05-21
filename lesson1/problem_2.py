@@ -1,6 +1,9 @@
 # Задача 2: Найдите сумму цифр трехзначного числа
 
-number = input("Введите трёхзначное число:")
+import os
+os.system('cls')
+
+number = input("\n Введите трёхзначное число:")
 
 # только для трехзначного числа
 number_int = int(number)
@@ -11,4 +14,5 @@ summ_str = 0
 for i in number:
     summ_str += int(i)
 
-print(summ_int, summ_str)
+print(
+    f'\n сумма цифр числа (1 метод) = {summ_int}, сумма цифр числа (2 метод) = {summ_str}\n')

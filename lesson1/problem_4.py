@@ -8,18 +8,26 @@
 # 24 -> 4 16 4
 # 60 -> 10 40 10
 
-mess = ''
+
+import os
+os.system('cls')
+
 s = int(input("Введите количество журавликов: "))
 
-s_true = s // 6 * 6
-diff = s - s_true
-if diff:
-    mess = f"не проданы вчера - {diff}"
+if s == 0:
+    message = "Журавликов нет. Не завезли бумагу"
+elif s < 6:
+    message = "Кто-то сделал мало журавликов"
+else:
+    mess = ''
+    s_true = s // 6 * 6
+    diff = s - s_true
+    if diff:
+        mess = f"не проданы вчера - {diff}"
 
-s_p = s_true / 6
-s_s = s_p
-s_k = (s_p + s_s) * 2
+    s_p = s_true / 6
+    s_s = s_p
+    s_k = (s_p + s_s) * 2
+    message = f'В наличии - {int(s)}    Изготовлено - {s_true}   Катя - {int(s_k)},  Петя - {int(s_p)},  Серёжа - {int(s_s)}   {mess}'
 
-
-print(
-    f'В наличии {int(s)} Изготовлено {s_true}  Катя {int(s_k)}, Петя {int(s_p)}, Серёжа {int(s_s)} {mess}')
+print(message)
