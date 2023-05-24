@@ -14,10 +14,11 @@ for i in coin_sides:
         tails += 1
     else:
         heads += 1
-print(f'\n Достаточно перевернуть {heads if tails > heads else tails} монеты')
+print(
+    f'\n Достаточно перевернуть {heads if tails > heads else tails} монеты')
 
 side = 0
 for i in coin_sides:
     side += int(i)
-print(f'\n Совершенно верно: всего {side if side<len(coin_sides)/2 else len(coin_sides)-side} монеты')
-
+print(
+    f'\n Совершенно верно: всего {side if side<len(coin_sides)/2 else len(coin_sides)-side} монеты\n')
